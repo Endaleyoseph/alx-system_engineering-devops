@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# changes the localhost and facebook.com resolution
+
+cp /etc/hosts tmp
+sed -i s/127.*$/127.0.0.2\\tlocalhost\\n8.8.8.8\\tfacebook.com/g tmp
+cp -f tmp /etc/hosts
